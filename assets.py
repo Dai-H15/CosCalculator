@@ -2,12 +2,10 @@ import numpy as np
 
 
 class CosData():
-    def __init__(self, name: str, datalist: list[int]):
+    def __init__(self, name: str, datalist: list[int | float | str]):
         self.name: str = name
-        self.datalist: list[int] = datalist
-    name: str
-    datalist: list[int | float | str]
-    result: int = 0
+        self.datalist: list[int | float | str] = datalist
+        self.result: int = 0
 
     def calc_with(self, *argv: list):
         target: CosData = argv[0]
@@ -27,8 +25,8 @@ class CosCalc():
     def __init__(self, target: CosData, data: list[CosData]):
         self.target: CosData = target
         self.data: list[CosData] = data
-    target: CosData
-    data: list[CosData] = []
+        self.target: CosData
+        self.data: list[CosData] = []
 
     def calc_all(self):
         for a in self.data:
