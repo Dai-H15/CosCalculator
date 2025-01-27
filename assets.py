@@ -25,8 +25,6 @@ class CosCalc():
     def __init__(self, target: CosData, data: list[CosData]):
         self.target: CosData = target
         self.data: list[CosData] = data
-        self.target: CosData
-        self.data: list[CosData] = []
 
     def calc_all(self):
         for a in self.data:
